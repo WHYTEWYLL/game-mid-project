@@ -5,24 +5,25 @@ import { Actor } from './actors/Actor';
 import { FPSViewer } from './actors/FPSViewer';
 import { Car } from './actors/Car';
 import { Timer } from './actors/Timer';
-import { Snake } from './actors/Snake';
+import { Sheriff } from './actors/Sheriff';
 
 window.onload = () => {
     // Actors
-    const player = new Car({ position: { x: canvasMid.x, y: 850 }, size: { w: 100, h: 40 }, speed: 10, angle: -90 });
+     const player = new Car({ position: { x: canvasMid.x, y: 850 }, size: { w: 100, h: 40 }, speed: 10, angle: -90 });
 
-    const circuit = new Circuit({ car: player });
+    //const circuit = new Circuit({ car: player });
 
     const fps = new FPSViewer();
 
     const timer = new Timer({ position: { x: canvasMid.x - 50, y: 35 } });
 
-    const snake = new Snake({ position: { x: 200, y: 500 }, size: { w: 100, h: 100 }, speed: 10, angle: -90 });
+    //const snake = new Snake({ position: { x: 200, y: 500 }, size: { w: 100, h: 100 }, speed: 10, angle: -90 });
 
+    const sheriff = new Sheriff({ position: { x: canvasMid.x - 450, y: canvasMid.y }, size: { w: 150, h: 150 }});
     const music = new BackgroundMusic();
 
     // Array de Actores que se van a dibujar en pantalla
-    const actors: Actor[] = [fps, player, snake, timer, circuit, ...circuit.barriers, music];
+    const actors: Actor[] = [sheriff, fps, timer]  //player, snake, circuit, ...circuit.barriers, music];
 
     // Inicializar el primer frame
     let lastFrame = 0;
