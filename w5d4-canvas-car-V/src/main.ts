@@ -5,7 +5,8 @@ import { Actor } from './actors/Actor';
 import { FPSViewer } from './actors/FPSViewer';
 import { Car } from './actors/Car';
 import { Timer } from './actors/Timer';
-import { Sheriff } from './actors/Sheriff';
+import { Sheriff } from './actors/Sheriff';
+import { Monster } from './actors/Monster';
 
 window.onload = () => {
     // Actors
@@ -20,10 +21,10 @@ window.onload = () => {
     //const snake = new Snake({ position: { x: 200, y: 500 }, size: { w: 100, h: 100 }, speed: 10, angle: -90 });
 
     const sheriff = new Sheriff({ position: { x: canvasMid.x - 450, y: canvasMid.y }, size: { w: 150, h: 150 }});
-    const music = new BackgroundMusic();
+    const monster = new Monster({ position: { x: canvasMid.x, y: canvasMid.y }});
 
     // Array de Actores que se van a dibujar en pantalla
-    const actors: Actor[] = [sheriff, fps, timer]  //player, snake, circuit, ...circuit.barriers, music];
+    const actors: Actor[] = [sheriff, monster, fps, timer]  //player, snake, circuit, ...circuit.barriers, music];
 
     // Inicializar el primer frame
     let lastFrame = 0;
