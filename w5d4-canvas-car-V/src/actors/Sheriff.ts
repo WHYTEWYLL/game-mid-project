@@ -1,7 +1,6 @@
 import { checkLimits } from './../utils/checkLimits';
 import { Point } from '../types/Point';
 import { Size } from '../types/Size';
-import { converAngleToRad } from '../utils/convertAngleToRad';
 import { Actor } from './Actor';
 
 const imagesSrc: string = 'src/assets/img/';
