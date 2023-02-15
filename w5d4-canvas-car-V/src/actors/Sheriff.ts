@@ -2,6 +2,7 @@ import { checkLimits } from './../utils/checkLimits';
 import { Point } from '../types/Point';
 import { Size } from '../types/Size';
 import { Actor } from './Actor';
+import { Ammo } from "./Ammo";
 
 const imagesSrc: string = 'src/assets/img/';
 
@@ -21,7 +22,8 @@ export class Sheriff extends Actor {
     image: HTMLImageElement;
     speed: Point;
     maxSpeed: number;
-    
+    ammunition: Ammo[];
+
     constructor(props: InitialSheriffProps, maxSpeed = 3.5 ) {
     // Posición inicial del Car
     super(props.position);
@@ -33,6 +35,7 @@ export class Sheriff extends Actor {
 
     this.speed = { x: 0, y: 0 };
     this.maxSpeed = maxSpeed;
+    this.ammunition = [];
 
     }
 
@@ -71,7 +74,6 @@ export class Sheriff extends Actor {
 
     }
 
-
     update() {
 
         let newPos: Point = {
@@ -104,7 +106,11 @@ export class Sheriff extends Actor {
                 this.speed.y = this.maxSpeed;
                 break;
             case ` `:
+                this.speed.y = 0;
+                this.speed.x = 0;
                 console.log("space");
+                console.log(this.ammunition);
+                console.log(...this.ammunition);
 
         }
     }
