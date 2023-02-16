@@ -13,6 +13,8 @@ This is a game built using TypeScript. The game is a shooting game where the pla
 
 # Project Access
 
+https://whytewyll.github.io/game-mid-project/
+
 # Table of Contents
 - Technologies Used
 - Images and Videos
