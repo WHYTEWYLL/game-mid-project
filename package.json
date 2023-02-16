@@ -1,5 +1,5 @@
 {
-    "name": "luke_monster",
+    "name": "luke-monster",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
@@ -7,8 +7,8 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "ghbuild": "vite build --outDir docs --base=/dungeon"
-    },
+        "ghbuild": "vite build --outDir docs --base=/game-mid-project"
+        },
     "dependencies": {},
     "devDependencies": {
         "typescript": "^4.9.5",
