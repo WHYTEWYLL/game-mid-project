@@ -6,7 +6,7 @@ import { Ammo } from "./Ammo";
 import { abs, hypot } from "../utils/Math";
 
 
-const imagesSrc: string = 'src/assets/img/';
+const imagesSrc: string = '/assets/img/';
 
 interface InitialThiefProps {
   position: Point;

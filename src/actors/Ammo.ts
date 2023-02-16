@@ -24,16 +24,15 @@ export class Ammo extends Actor {
     this.expired = false;
 
     // Ammo starts at player postition
-    const { x, y } = this.player.position;
-    this.position = { x, y };
+    this.position = this.player.position;
 
     // Ammo size and speed
     this.size = { w: 100, h: 100 };
-    this.speed = 105;
+    this.speed = 50;
 
     // Sprite
     this.image = new Image();
-    this.image.src = 'src/assets/img/bullet.png';
+    this.image.src = '/assets/img/bullet.png';
     console.log("New Ammo");
   }
 

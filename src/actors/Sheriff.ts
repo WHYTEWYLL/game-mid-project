@@ -4,7 +4,7 @@ import { Size } from '../types/Size';
 import { Actor } from './Actor';
 import { Ammo } from "./Ammo";
 
-const imagesSrc: string = 'src/assets/img/';
+const imagesSrc: string = '/assets/img/';
 
 interface InitialSheriffProps {
     position: Point;
@@ -134,7 +134,5 @@ export class Sheriff extends Actor {
 
     restart(): void {
         this.position = this.initialPosition;
-        // this.angle = -90;
-        // this.speed = 0;
     }
 }

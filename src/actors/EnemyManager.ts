@@ -2,6 +2,8 @@ import { Actor } from "./Actor";
 import { Ammo } from "./Ammo";
 import { Monster } from "./Monster";
 import { AmmoManager } from "./AmmoManager";
+import { canvas } from '../utils/getCanvas';
+
 
 export class EnemyManager extends Actor {
   // This will hold all alive bullets in game
@@ -12,11 +14,17 @@ export class EnemyManager extends Actor {
 
     this.enemies = [];
 
-    for (let i = 0; i < 10; i++) {
+    const minX = canvas.width * 0.2;
+    const maxX = canvas.width;
+    const minY = 200;
+    const maxY = canvas.height - 100;
+    const numEnemies = 10;
+
+    for (let i = 0; i < numEnemies; i++) {
       
       let position = {
-        x: Math.random() * 1000,
-        y: Math.random() * 1000,
+        x: Math.random() * (maxX - minX) + minX,
+        y: Math.random() * (maxY - minY) + minY,
       }
       const monster = new Monster( {position: position}, ammo_manager);
       this.enemies.push(monster);
