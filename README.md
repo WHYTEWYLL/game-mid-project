@@ -1,4 +1,4 @@
-<img src="back.jpeg" width="100%"/>
+<img src="./public/back.jpeg" width="100%"/>
 
 # Luke Monster Game
 
