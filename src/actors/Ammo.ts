@@ -32,7 +32,7 @@ export class Ammo extends Actor {
 
     // Sprite
     this.image = new Image();
-    this.image.src = '/assets/img/bullet.png';
+    this.image.src = 'bullet.png';
     console.log("New Ammo");
   }
 

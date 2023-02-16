@@ -6,7 +6,6 @@ import { Ammo } from "./Ammo";
 import { abs, hypot } from "../utils/Math";
 
 
-const imagesSrc: string = '/assets/img/';
 
 interface InitialThiefProps {
   position: Point;
@@ -33,7 +32,7 @@ export class Monster extends Actor {
       h: 100,
     };
     this.image = new Image();
-    this.image.src = imagesSrc + 'monster.png';
+    this.image.src = 'monster.png';
     this.ammo = ammo_manager;
     this.to_delete = false;
   

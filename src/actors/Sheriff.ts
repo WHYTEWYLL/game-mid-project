@@ -4,8 +4,6 @@ import { Size } from '../types/Size';
 import { Actor } from './Actor';
 import { Ammo } from "./Ammo";
 
-const imagesSrc: string = '/assets/img/';
-
 interface InitialSheriffProps {
     position: Point;
     size: Size;
@@ -31,7 +29,7 @@ export class Sheriff extends Actor {
     this.size = props.size;
     this.initialPosition = props.position;
     this.image = new Image();
-    this.image.src = imagesSrc + 'cowboy.png';
+    this.image.src = '/cowboy.png';
 
     this.speed = { x: 0, y: 0 };
     this.maxSpeed = maxSpeed;
