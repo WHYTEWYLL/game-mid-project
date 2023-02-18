@@ -29,7 +29,7 @@ export class Sheriff extends Actor {
     this.size = props.size;
     this.initialPosition = props.position;
     this.image = new Image();
-    this.image.src = '/cowboy.png';
+    this.image.src = 'cowboy.png';
 
     this.speed = { x: 0, y: 0 };
     this.maxSpeed = maxSpeed;
